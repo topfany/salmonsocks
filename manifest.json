@@ -3,14 +3,14 @@
   "manifest_version": 3,
   "name": "__MSG_name__",
   "description": "__MSG_description__",
-  "version": "1.0.10",
+  "version": "1.0.1",
   "default_locale": "zh_CN",
   "icons": {
     "16":"assets/img/logos/logo.png",
     "48":"assets/img/logos/logo.png",
     "128":"assets/img/logos/logo.png"
   },
-  "homepage_url": "https://phantomshuttle.space/",
+  "homepage_url": "https://salmonsocks.app/",
   "options_page": "options.html",
   "action": {
     "default_title": "__MSG_name__",

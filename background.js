@@ -1,7 +1,7 @@
 const manifest = chrome.runtime.getManifest();
 // console.log('manifest: ' + JSON.stringify(manifest));
-const doh_servers = ["https://api.phantomshuttle.space/api/v1/resolve"];
-const api_urls = ["https://api.phantomshuttle.space/api/v1","https://api.redsuns.live/api/v1"];
+const doh_servers = ["https://api.salmonsocks.app/api/v1/resolve"];
+const api_urls = ["https://api.salmonsocks.app/api/v1","https://api.redsuns.live/api/v1"];
 const _tester_data = {};
 const _session = null;
 const pending_requests = [];
@@ -154,7 +154,7 @@ function session_reload(call_func = handle_background) {
 function post(e, b = null, c = null, d = null, f = 15) {
     chrome.storage.local.get(["session", "api_urls", "session_sync_id", "proxy", "internal", "pk"], data => {
         var local_info = {};
-        var api_urls = ["https://api.phantomshuttle.space/api/v1","https://api.redsuns.live/api/v1"];
+        var api_urls = ["https://api.salmonsocks.app/api/v1","https://api.redsuns.live/api/v1"];
         var session;
         if (data.hasOwnProperty("session")) {
             session = data.session;
@@ -213,7 +213,7 @@ function post(e, b = null, c = null, d = null, f = 15) {
             f = f - 1;
             if (f > 0) {
                 if (api_urls.length === 0) {
-                    api_urls = ["https://api.phantomshuttle.space/api/v1","https://api.redsuns.live/api/v1"];
+                    api_urls = ["https://api.salmonsocks.app/api/v1","https://api.redsuns.live/api/v1"];
                 }
                 var new_api_urls = JSON.stringify(api_urls);
                 chrome.storage.local.set({'api_urls': new_api_urls}).then((req) =>{
